@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import logo from './img/logo.png'
 import UserCard from "./components/UserCard";
 import Search from "./components/Search";
 
@@ -45,7 +46,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-         <Search changeUserName={this.changeUserName} />
+        <img src={logo} className="logo" alt="Github logo" />
+        <Search changeUserName={this.changeUserName} />
         <UserCard user={this.state.user} followers={this.state.followers}/>
       </div>
     )

@@ -1,19 +1,29 @@
 import React from "react";
-import Search from "./Search";
+import "../App.css";
 
 export default function UserCard (props) {
 
     return (
+        <>
         <div className="user-card">
-            <h1>{props.user.name}</h1>
-            <img src={props.user.avatar_url} />
-            <h2>Username: {props.user.login}</h2>
-            <p>Bio: {props.user.bio}</p>
-            <p>Location: {props.user.location}</p>
-            <div className="followers">
-                Followers: 
-                {props.followers.map(follower => <div key={follower.id}>{follower.login}</div>)}
+            <h1>{props.user.name}'s Profile</h1>
+            <img className="user-image" src={props.user.avatar_url} />
+            <div className="user-box">
+            <h2>{props.user.login}</h2>
+            <p>{props.user.bio}</p>
+            <p>{props.user.location}</p>
             </div>
         </div>
+        
+        <h2>Followers:</h2> 
+        <div className="followers">
+                {props.followers.map(follower => (
+                    <div className="follower-cards"
+                        key={follower.id}>
+                        <h3>{follower.login}</h3>
+                        <img className="follower-card-image" src={follower.avatar_url} />
+                    </div>))}
+            </div>
+       </>
     )
 }

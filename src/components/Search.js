@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 class Search extends React.Component {
     constructor() {
@@ -20,14 +21,16 @@ class Search extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="search-form" onSubmit={this.handleSubmit}>
+                <p>Search for Any User Below!</p>
                 <input type="text" 
                        name="search" 
+                       className="search-input"
                        value={this.state.search}
                        onChange={this.handleChange}
                        placeholder="Search criteria go here..." 
                 />
-                <button type="submit">Search for a User</button>
+                <button className="search-button" type="submit">Search for a User</button>
             </form>
         )
     }
