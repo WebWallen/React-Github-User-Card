@@ -39,6 +39,7 @@ h1, h2, h3, p {
   display: block;
   margin: 0 auto;
   width: 40vw;
+  text-align: center;
 }
 
 .search-button {
@@ -54,6 +55,7 @@ h1, h2, h3, p {
   border: 1px solid black;
   color: black;
   background: white;
+  cursor: pointer;
 }
 
 .logo {
