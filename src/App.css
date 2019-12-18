@@ -5,6 +5,7 @@ h1, h2, h3, p {
 .followers {
   display: grid;
   grid-template-columns: auto auto auto;
+  max-width: 100%;
 }
 
 .follower-cards {
@@ -29,6 +30,7 @@ h1, h2, h3, p {
 .user-image {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .search-form {
@@ -62,4 +64,10 @@ h1, h2, h3, p {
   display: block;
   margin: 0 auto;
   width: 70vw;
+}
+
+@media screen and (max-width: 500px) {
+  .followers {
+    grid-template-columns: auto auto;
+  }
 }
